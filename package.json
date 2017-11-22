@@ -1,0 +1,22 @@
+{
+  "name": "db-table",
+  "version": "1.0.0",
+  "description": "load mysql tables and table references",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luckyqqk/dbTable.git"
+  },
+  "keywords": [
+    "db-table"
+  ],
+  "author": "luckyqqk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luckyqqk/dbTable/issues"
+  },
+  "homepage": "https://github.com/luckyqqk/dbTable#readme"
+}
