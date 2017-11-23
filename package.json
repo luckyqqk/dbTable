@@ -1,6 +1,6 @@
 {
   "name": "db-table",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "load mysql tables and table references",
   "main": "index.js",
   "scripts": {
