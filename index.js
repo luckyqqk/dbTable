@@ -1,1 +1,3 @@
-module.exports = require('./lib/dbTable');
+module.exports = {
+    components: __dirname + '/lib/components/'
+};
