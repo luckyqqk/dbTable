@@ -7,8 +7,7 @@ load mysql tables and table references
 * 根据表结构关系,很容易组建CRUD语句.方便快捷.
 
 ### 使用注意
-* 仅作为工具使用,开服需调用init加载.
-* 需传入可执行sql的dbClient和数据库名.
+* 依赖于db-mgr,请先安装配置[db-mgr](https://github.com/luckyqqk/dbMgr).
 
 ### 方法支持
 
@@ -16,31 +15,19 @@ load mysql tables and table references
 ```
 getTable(tableName)
 ```
-#### 获得某表数据的默认JSON供插入需求使用.返回的JSON不会包含自增属性的字段.
+#### 获得插入sql,支持同表批量
 ```
-getAllInsertJson(table, jsonArray)
+getInsertSql = function(tableName, insertJson)
 ```
-#### 根据json,组建表相关的json,去除额外字段,添加默认字段
+#### 获取删除sql
 ```
-getAllTableJson(table, jsonArray)
+getDeleteSql = function(tableName, priValue, forValue)
 ```
-#### 生成插入sql
+#### 获得更新sql,不支持批量
 ```
-getInsertSqlByJson(table, allJsonArray)
+getUpdateSql = function(tableName, updJson)
 ```
-#### 根据主键/外键生成select语句
+#### 根据主键或外键生成select语句,建议用外键
 ```
-getSelectSql(tableName, sign)
-```
-#### 根据json生成update语句
-```
-getUpdateSqlByJson(tableName, json)
-```
-#### 根据主键,生成删除语句
-```
-getDeleteSql(tableName, json)
-```
-#### 根据外键,生成删除语句
-```
-getDeleteSqlByForeign(tableName, foreignValue)
+getSelectSql = function(tableName, priValue, forValue)
 ```
